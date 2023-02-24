@@ -9,9 +9,11 @@
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
-    "@playwright/test": "^1.31.1"
+    "@playwright/test": "^1.31.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.191",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
