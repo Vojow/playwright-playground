@@ -1,10 +1,6 @@
 {
   "prettier.configPath": ".prettierrc",
   "eslint.trace.server": "off",
-  "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "typescript", "autoFix": true }
-  ],
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
