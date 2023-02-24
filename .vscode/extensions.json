@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "nicoespeon.abracadabra",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
