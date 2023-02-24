@@ -5,7 +5,7 @@ import _ from "lodash";
 export class SignupForm extends BasePage {
   constructor(page: Page) {
     super(page);
-    this.url = "https://automationexercise.com/login";
+    this.url = "/login";
   }
   private formElement(name: "email" | "name" | "button") {
     return this.page.locator(`[data-qa='signup-${name}']`);
@@ -36,7 +36,7 @@ type Selects = "days" | "months" | "years" | "country";
 export class AccountInformationForm extends BasePage {
   constructor(page: Page) {
     super(page);
-    this.url = "https://automationexercise.com/signup";
+    this.url = "/signup";
   }
   private genderCheckbox(gender: "male" | "female") {
     return this.page.locator(gender === "male" ? "#id_gender1" : "#id_gender2");
@@ -63,7 +63,7 @@ export class AccountInformationForm extends BasePage {
 
   async fillInput(field: Inputs | Selects, value: string | number) {
     this.isInput(field)
-      ? await this.formField(field).fill(`${value}`)
+      ? await this.formField(field).type(`${value}`)
       : await this.formField(field).selectOption(`${value}`);
   }
 
@@ -75,14 +75,14 @@ export class AccountInformationForm extends BasePage {
 export class AccountCreated extends BasePage {
   constructor(page: Page) {
     super(page);
-    this.url = "https://automationexercise.com/account_created";
+    this.url = "/account_created";
   }
 
   private get accountCreatedMessage() {
     return this.page.locator("[data-qa='account-created']");
   }
 
-  getMessageText() {
+  async getMessageText() {
     return this.accountCreatedMessage.textContent();
   }
 }

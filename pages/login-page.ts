@@ -4,7 +4,7 @@ import { BasePage } from "./base-page";
 export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
-    this.url = "https://automationexercise.com/login";
+    this.url = "/login";
   }
 
   private formElement(name: "email" | "password" | "button") {

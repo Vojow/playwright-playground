@@ -2,11 +2,17 @@ import { Page } from "@playwright/test";
 
 export class BasePage {
   readonly page: Page;
-  protected url: string;
+  protected _url: string;
   constructor(page: Page) {
     this.page = page;
   }
   async visit() {
-    await this.page.goto(this.url);
+    await this.page.goto(this._url);
+  }
+  get url(): string {
+    return this.url;
+  }
+  protected set url(url: string) {
+    this._url = url;
   }
 }
